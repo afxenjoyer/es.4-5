@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    int numeroProdotti;
+    int numeroProdotti = 0;
     float prezzoTotale = 0.0;
     float prezzoProdotti = 0.0;
 
@@ -12,12 +12,12 @@ int main(void)
     while (numeroProdotti > 0)
     {
         printf("Inserisci il costo del prodotto acquistato\n");
-        scanf("%f", prezzoProdotti);
+        scanf("%f", &prezzoProdotti);
+        prezzoTotale = prezzoTotale + prezzoProdotti;
         numeroProdotti--;
     }
 
-    prezzoTotale = prezzoTotale + prezzoProdotti;
-    printf("Il prezzo totale è %f\n", prezzoTotale);
+    printf("Il prezzo totale è %.2f euro\n", prezzoTotale);
 
     return 0;
 }
